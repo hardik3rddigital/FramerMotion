@@ -2,31 +2,19 @@ import React from "react";
 import { motion } from "framer-motion";
 
 function File3() {
-  // const boxVariant = {
-  //   objectOne: {
-  //     x: 100,
-  //     scale: 1.5,
-  //   },
-  //   objectTwo: {
-  //     x: 1000,
-  //     scale: 0.2,
-  //   },
-  // };
-
   const list = {
-    hidden: { opacity: 0 },
+    hidden: { x: "-100vw" },
     visible: {
-      x: 100,
-      opacity: 1,
+      x: 0,
       transition: { delay: 2, when: "beforeChildren" },
     },
   };
 
   const list2 = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { x: 0, opacity: 1, staggerChildren: 0.2 },
+    hidden: { x: -100, opacity: 0 },
+    visible: { x: 0, staggerChildren: 1, opacity: 1 },
   };
-  // const item = { hidden: { x: -10, opacity: 0 } };
+
   return (
     <div className="boxcontainer">
       <motion.div
@@ -34,10 +22,16 @@ function File3() {
         variants={list}
         animate="visible"
         initial="hidden"
-        transition={{ type: "spring" }}
+        // transition={{ type: "spring" }}
       >
-        {[1, 2, 3].map((box) => {
-          return <motion.li className="boxItem" variants={list2}></motion.li>;
+        {[1, 2, 3].map((box, index) => {
+          return (
+            <motion.li
+              className="boxItem"
+              variants={list2}
+              key={index}
+            ></motion.li>
+          );
         })}
       </motion.div>
     </div>
