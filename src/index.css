@@ -45,3 +45,10 @@ button {
   padding: 8px 12px;
   line-height: 0.8;
 }
+
+.Shape_One {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  margin-top: 25px;
+}
