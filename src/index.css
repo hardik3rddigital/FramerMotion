@@ -19,10 +19,21 @@ code {
 .box_one,
 .box_two,
 .box {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   background: red;
   margin-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.boxItem {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  margin: 10px;
 }
 
 /* .box_two:hover {
