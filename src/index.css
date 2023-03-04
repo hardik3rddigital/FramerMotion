@@ -39,3 +39,9 @@ code {
 /* .box_two:hover {
   transform: scale(1.5) !important;
 } */
+
+button {
+  border: 0;
+  padding: 8px 12px;
+  line-height: 0.8;
+}

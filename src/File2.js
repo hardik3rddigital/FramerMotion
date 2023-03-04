@@ -10,7 +10,7 @@ function File2() {
         className="box_two"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        drag
+        drag="x"
         dragConstraint={{
           right: 20,
           left: -20,
